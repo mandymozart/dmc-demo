@@ -7,7 +7,7 @@ thumbs.db
 *~*
 *.swp
 *vendor/*
-.idea
+*.idea/*
 
 
 ##### Codeigniter files
