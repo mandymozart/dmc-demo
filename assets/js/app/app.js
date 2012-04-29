@@ -62,13 +62,13 @@ var ContactView = HandlebarsView.extend({
 });
 
 var AboutView = HandlebarsView.extend({
-  template: "#about-template"
+  template: "#user-template"
 });
 
 var AppRouter = Backbone.Marionette.AppRouter.extend({
   appRoutes: {
     "":        "showMain",
-    "about":   "showAbout",
+    "user":   "showUser",
     "contact": "showContact"
   }
 });
@@ -78,7 +78,7 @@ var App = new Backbone.Marionette.Application({
     mainView: new MainView(),
     navigationView: new NavigationView(),
     contactView: new ContactView(),
-    aboutView: new AboutView()
+    userView: new UserView()
   },
 
   Routers: {
@@ -86,7 +86,7 @@ var App = new Backbone.Marionette.Application({
 });
 
 App.addRegions({
-  navigationRegion: ".navbar",
+  navigationRegion: ".navigation",
   mainRegion: ".container"
 });
 
@@ -100,7 +100,7 @@ var AppController = {
   },
 
   showAbout: function () {
-    App.mainRegion.show(App.Views.aboutView);
+    App.mainRegion.show(App.Views.userView);
   }
 };
 

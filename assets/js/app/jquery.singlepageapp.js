@@ -20,6 +20,16 @@ function resetScreen(){
 
 }
 
+// RESIZING MICROSITE
+/*
+var section_p = $('.releases-header').height()+$('.history-header').height()+$('.divider').height(); //section padding (sum of history-header, library-header, divider
+var offset = $('#display').offset();
+var window_h = $(window).height();
+var display_h = (window_h - offset.top - footer_h)-section_p;
+var section_h = (display_h/2);
+$('#releases').height(section_h);
+$('#history').height(section_h);
+*/
 
 // resize
 $(window).resize(function(){
@@ -30,6 +40,10 @@ $(window).resize(function(){
 // dom ready
 $(document).ready(function(){
     resetScreen();
+
+    // bind overscroll to scrollable regions (replace with data-overscroll="auto/toggle/hidden")
+    //$('#releases').overscroll();
+    //$('#history').overscroll();
 });
 
 /* HELPER */
