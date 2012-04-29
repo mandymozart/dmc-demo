@@ -1,0 +1,8 @@
+/**
+ * CSS
+ * Override some defaults
+ * of bootstrap.css */
+
+body { 
+  background-color:#ececec;
+}
